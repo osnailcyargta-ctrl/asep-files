@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CodeEditorActivity" android:exported="false"/>
+        <activity android:name=".CodeEditorActivity" android:exported="false"/>\n        <activity android:name=".HtmlViewerActivity" android:exported="false"/>
         <activity android:name=".SettingsActivity" android:exported="false"/>
 
         <provider
