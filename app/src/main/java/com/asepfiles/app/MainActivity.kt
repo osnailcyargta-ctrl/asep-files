@@ -140,10 +140,11 @@ class MainActivity : AppCompatActivity() {
             backStack.addLast(currentDir)
             loadDir(item.file)
         } else {
-            when (item.mimeType()) {
-                "code", "pdf" -> openCodeEditor(item.file)
-                "archive" -> showUnzipDialog(item.file)
-                "apk" -> installApk(item.file)
+            when {
+                item.extension == "html" || item.extension == "htm" -> openHtmlViewer(item.file)
+                item.mimeType() == "code" || item.mimeType() == "pdf" -> openCodeEditor(item.file)
+                item.mimeType() == "archive" -> showUnzipDialog(item.file)
+                item.mimeType() == "apk" -> installApk(item.file)
                 else -> openFile(item.file)
             }
         }
@@ -151,6 +152,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun openCodeEditor(file: File) {
         val intent = Intent(this, CodeEditorActivity::class.java)
+        intent.putExtra("file_path", file.absolutePath)
+        startActivity(intent)
+    }
+
+    private fun openHtmlViewer(file: File) {
+        val intent = Intent(this, HtmlViewerActivity::class.java)
         intent.putExtra("file_path", file.absolutePath)
         startActivity(intent)
     }
