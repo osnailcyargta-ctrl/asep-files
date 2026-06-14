@@ -1,0 +1,21 @@
+<resources>
+    <style name="Theme.AsepFiles" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">#0A0A0C</item>
+        <item name="android:statusBarColor">#0A0A0C</item>
+        <item name="android:navigationBarColor">#0A0A0C</item>
+        <item name="colorPrimary">#7777EE</item>
+    </style>
+
+    <style name="Theme.AsepFiles.Dark" parent="Theme.AsepFiles">
+        <item name="android:windowBackground">#0A0A0C</item>
+        <item name="android:statusBarColor">#0A0A0C</item>
+        <item name="android:navigationBarColor">#0A0A0C</item>
+    </style>
+
+    <style name="Theme.AsepFiles.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#FAFAFA</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="colorPrimary">#5555DD</item>
+    </style>
+</resources>
